@@ -28,7 +28,7 @@ package cn;
 // Related Topics 贪心算法 数组 
 // 👍 254 👎 0
 
-public class 种花问题{
+class 种花问题{
     public static void main(String[] args){
         Solution solution = new 种花问题().new Solution();
         }
@@ -36,7 +36,17 @@ public class 种花问题{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
-		return true;
+		for ( int i = 0, len = flowerbed.length ; i < len ; ) {
+			if ( flowerbed[ i ] == 1 ) {
+				i += 2;
+			} else if ( i == flowerbed.length - 1 || flowerbed[ i + 1 ] == 0 ) {
+				n--;
+				i += 2;
+			} else {
+				i += 3;
+			}
+		}
+    	return n <= 0;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

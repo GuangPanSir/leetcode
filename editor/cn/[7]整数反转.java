@@ -25,7 +25,7 @@ package cn;
 // Related Topics 数学 
 // 👍 2424 👎 0
 
-public class 整数反转{
+class 整数反转{
     public static void main(String[] args){
         Solution solution = new 整数反转().new Solution();
         }
@@ -33,13 +33,7 @@ public class 整数反转{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int reverse(int x) {
-    	int remain_low = x % 10;
-    	int remain_high = x / 10;
-    	int temp = 0;
-    	int result = 0;
-    	while(remain_low != 0){
-    		result = result * 10 + remain_low;
-		}
+    
 		return 0;
     }
 }
